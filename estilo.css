@@ -1,0 +1,219 @@
+/* Fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaYwndkAGQjagB1Z-KMV3HcuEPCp6995CV7g&s'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5em; 
+  text-align: center;
+  margin-top: 20px;
+  color: #ffeb3b; 
+}
+
+h3 {
+  text-align: center;
+  background-color: #6b8e23; 
+  color: #ffffff; 
+  font-size: 1.2em;
+}
+
+h4 {
+  text-align: center;
+  background-color: #800020; 
+  color: #ffffff; 
+  font-size: 1.2em;
+  padding: 10px; 
+  margin: 0; 
+  text-align: center; 
+  font-family: 'Lora', serif; 
+}
+
+.drop-area {
+  border: 2px dashed #0730c5;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+  position: relative;
+  transition: background-color 0.3s ease;
+  flex: 1; /* Permite que el drop-area ocupe el espacio disponible */
+}
+
+.drop-area.drag-over {
+  background-color: #f0f8ff;
+}
+
+.drop-area svg {
+  fill: #0730c5;
+  margin-bottom: 10px;
+}
+
+.drop-area label {
+  font-weight: bold;
+}
+
+.file-input {
+  display: none; 
+}
+
+.browse-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  background-color: #0730c5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.browse-btn:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1; /* Permite que el contenedor ocupe el espacio disponible */
+}
+
+.container2 {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.archivos_subidos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.archivos_subidos a {
+  font-size: 1em; /* Tamaño de fuente estándar */
+}
+
+.boton-descargar {
+  color: #0730c5;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.boton-descargar:hover {
+  color: #0056b3;
+}
+
+.btn_delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #dc3545;
+  transition: color 0.3s ease;
+}
+
+.btn_delete:hover {
+  color: #c82333;
+}
+
+.btn_delete svg {
+  fill: currentColor;
+}
+
+.beta {
+  color: #dc3545;
+}
+
+#progressBar {
+  width: 100%;
+  height: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: #e9ecef;
+}
+
+#progressBar::before {
+  content: '';
+  display: block;
+  height: 100%;
+  background: #0730c5;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+/* Media queries para dispositivos tablet o ipad */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .drop-area {
+    padding: 80px; 
+  }
+
+  .archivos_subidos a {
+    font-size: 0.9em; /* Ajusta el tamaño de fuente para tablets */
+  }
+}
+
+/* Media queries para dispositivos pequeños */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em; 
+  }
+
+  .drop-area {
+    padding: 15px; 
+  }
+
+  .browse-btn {
+    padding: 8px 16px; 
+    font-size: 14px;
+  }
+
+  .container, .container2 {
+    padding: 10px;
+  }
+
+  .archivos_subidos {
+    flex-direction: column;
+  }
+}
+
+/* Media queries para dispositivos muy pequeños */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em; 
+  }
+
+  .browse-btn {
+    width: 100%; 
+    box-sizing: border-box;
+  }
+
+  .archivos_subidos a {
+    font-size: 0.8em; /* Reduce el tamaño del texto en dispositivos pequeños */
+  }
+}
